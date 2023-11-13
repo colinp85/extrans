@@ -1,14 +1,9 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub mod fix;
+pub mod extrans_error;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub use fix::FIX;
+pub use extrans_error::ExtransError;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub trait Extrans {
+    fn encode(&self) -> String;
 }

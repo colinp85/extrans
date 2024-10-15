@@ -1,4 +1,5 @@
 pub mod fix;
+pub mod properties;
 pub mod extrans_error;
 
 pub use fix::FIX;
